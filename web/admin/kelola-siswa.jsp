@@ -3,7 +3,7 @@
     Created on : Dec 9, 2017, 9:37:29 AM
     Author     : syah
 --%>
-    <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
@@ -117,6 +117,7 @@
                 <th scope="col">NIS</th>
                 <th scope="col">Nama Lengkap</th>
                 <th scope="col">Jenis Kelamin</th>
+                <th scope="col">Kelas</th>
                 <th scope="col">TTL</th>
                 <th scope="col">No Hp</th>
                 <th scope="col">E-mail</th>                
@@ -137,16 +138,17 @@
                     Class.forName("org.postgresql.Driver");
                     Connection konek = DriverManager.getConnection(url, user, password);
                     statement = konek.createStatement();
-                    String Data = "SELECT nis,CONCAT(nama_depan,' ',nama_tengah,' ',nama_belakang),gender,CONCAT(tempat_lahir,', ',tanggal_lahir),no_hp,email FROM siswa";
+                    String Data = "SELECT nis,CONCAT(nama_depan,' ',nama_tengah,' ',nama_belakang),gender,kelas,CONCAT(tempat_lahir,', ',tanggal_lahir),no_hp,email FROM siswa ORDER BY kelas DESC";
                     rs = statement.executeQuery(Data);                                                                                      
                 %>
             <% while(rs.next()){ 
                     String nama_d=rs.getString(1);
                     String nama_t=rs.getString(2);
                     String nama_b=rs.getString(3);
-                    String jk=rs.getString(4);
-                    String tml=rs.getString(5);
-                    String tgll=rs.getString(6);
+                    String kelas=rs.getString(4);
+                    String jk=rs.getString(5);
+                    String tml=rs.getString(6);
+                    String tgll=rs.getString(7);
                     a++;             
                 %>
             <tbody>
@@ -155,7 +157,8 @@
                 <td ><%=nama_d%></td>
                 <td><%=nama_t%></td>
                 <td><%=nama_b%></td>
-                <td><%=jk%></td>
+                <td><%=kelas%></td>
+                <td><%=jk%></td>                
                 <td><%=tml%></td>
                 <td><%=tgll%></td>                
                 <td><form action="admin-edit-siswa.jsp" method="post">

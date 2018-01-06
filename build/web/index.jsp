@@ -22,21 +22,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style type="text/css">
             a{                
-                color: white important;                
+                color: white !important;                
+            }
+            .untukBody{
+                color: #000 !important;
             }
             #logo{
-                height: 30px;
-                width: 30px;
+                height: 40px;
+                width: 40px;
                 margin-right: 50px;
                 margin-left: 28px;
             }
             .navigasi{
                 border-bottom: 4px solid #007bff;
             }
+            .sidebar-kiri{
+                padding: 15px 25px;
+                border: 1px solid #0033ff;
+                border-radius: 4px;
+                margin-top : 10px;
+            }
+            .cours{
+                height: 90%;
+                width: 100%;
+            }
         </style> 
-        <title>SMAN 1</title>
+        <title>Siakadslta</title>
     </head>             
-    <body style="background-color:#ffffff">
+    <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark navigasi">
             <img src="images/logo-sma_1.png" id="logo">
             <a class="navbar-brand" href="#" style="color:#ffffff">Home</a>
@@ -49,7 +62,7 @@
                 <a class="nav-link" href="#" style="color:#ffffff">Profil<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="color:#ffffff">Gallery</a>
+                <a id="galeri" class="nav-link" href="#" style="color:#ffffff">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a style="color:#ffffff" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -76,7 +89,7 @@
                 <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
                 %>
                 <form action="FormLogin.jsp" style=" margin-top: 15px;">
-                    <button style="margin-left:15px;" type="submit" class="btn btn-toolbar" aria-label="Left Align">
+                    <button style="margin-left:15px;" type="submit" class="btn btn-info" aria-label="Left Align">
                        <span class="glyphicon glyphicon-align-left" aria-hidden="true">login</span>                         
                     </button>
                 </form>
@@ -89,33 +102,18 @@
                 %>
               </form>
           </div>
-        </nav>
-        <div class="row" style="margin:0px;">
-            <div class="col-md-2">
-                <h3>Berita Terbaru</h3>                    
-                <ul>
-                    <%
-                        TheConnection konek = new TheConnection();
-                        String sql = "SELECT judul_berita FROM berita ORDER BY tanggal_dibuat ASC";                        
-                        ResultSet rs;
-                        rs=konek.executeQuery(sql);
-                        while(rs.next()){                                            
-                    %>
-                    <li><a href="berita.jsp"><%=rs.getString(1)%></a></li>
-                    <%}%>
-                </ul>
-            </div>
-            <div class="col-md-10">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        </nav>                       
+              <div class="col-sm-12"style="padding: 0px;">
+                <div id="carouselExampleControls" style="margin: 0px; border: 1px solid #000;" class="carousel slide cours" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                          <img class="d-block w-100" src="images/slide1_1.jpg" alt="First slide" height="400px" width="60%">
+                          <img class="d-block w-100 cours" src="images/slide1_1.jpg" alt="First slide" height="400px" width="60%">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="images/slide2_1.jpg" alt="Second slide" height="400px" width="60%">
+                        <img class="d-block w-100 cours" src="images/slide2_1.jpg" alt="Second slide" height="400px" width="60%">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="images/slide3_1.jpg" alt="Third slide" height="400px" width="60%">
+                        <img class="d-block w-100 cours" src="images/slide3_1.jpg" alt="Third slide" height="400px" width="60%">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -128,14 +126,30 @@
                     </a>
                 </div>
                 <script>$('.carousel').carousel();</script>
-            </div>
-        </div>   
-        <div class="container container-fluid">
-            <div class="row">
-                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
-                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
-                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
-            </div>
+            </div>                   
+        <div class="col-sm-12">
+            <h3 title="berita terbaru">Berita Terbaru</h3>                    
+            <ul>
+                <%
+                try{
+                    TheConnection konek = new TheConnection();
+                    String sql = "SELECT judul_berita FROM berita ORDER BY tanggal_dibuat ASC";                        
+                    ResultSet rs;
+                    rs=konek.executeQuery(sql);
+                    while(rs.next()){                                            
+                %>
+
+                    <li>                           
+                        <a class="untukBody" href="berita.jsp?judul=<%=rs.getString(1)%>" name="judul"><%=rs.getString(1)%></a>
+                    </li>
+                <%}
+                }catch(Exception e){
+                    out.println("ada kesalahan !");
+                }
+                %>
+            </ul>
         </div>
+          
+        <%@include file="footer.jsp"%>
     </body>
 </html>

@@ -11,7 +11,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
-        <h1>Sukses!</h1>
+    <body onload="alert('Sukses!')">
+        <h1 onLoad="response.window.location.href'FormLogin.jsp'">Sukses!</h1>
+        <a>Silahkan </a><a href="login.jsp">Login</a>
     </body>
 </html>

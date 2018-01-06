@@ -58,10 +58,10 @@ public class kalkulasiNilaiNGTest {
     @Test
     public void testKali() {
         System.out.println("kali");
-        double a = 0.0;
-        double b = 0.0;
+        double a = -2.0;
+        double b = 4.0;
         kalkulasiNilai instance = new kalkulasiNilai();
-        double expResult = 0.0;
+        double expResult = -8.0;
         double result = instance.kali(a, b);
         assertEquals(result, expResult, 0.0);
         // TODO review the generated test code and remove the default call to fail.
@@ -71,12 +71,12 @@ public class kalkulasiNilaiNGTest {
      * Test of tambah method, of class kalkulasiNilai.
      */
     @Test
-    public void testTambah() {
+    public void testTambahMinus() {
         System.out.println("tambah");
-        double c = 0.0;
-        double d = 0.0;
+        double c = -6;
+        double d = -6;
         kalkulasiNilai instance = new kalkulasiNilai();
-        double expResult = 0.0;
+        double expResult = -12;
         double result = instance.tambah(c, d);
         assertEquals(result, expResult, 0.0);
         // TODO review the generated test code and remove the default call to fail.

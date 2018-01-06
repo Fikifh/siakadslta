@@ -52,17 +52,17 @@ public class hapusSiswa extends HttpServlet {
             Class.forName("org.postgresql.Driver");
             Connection konek = DriverManager.getConnection(url, user, password);            
             String nis = request.getParameter("dipilih");                                                    
-            String sql = "DELETE FROM siswa WHERE nis="+nis+"";
+            String sql = "UPDATE siswa_baru SET status='Ditolak' WHERE id_sisbar="+nis+"";
             Statement st = konek.createStatement();           
             int status = st.executeUpdate(sql);           
-            response.sendRedirect("admin/kelola-siswa.jsp");                                   
-    }catch(Exception e){
-       out.print(request.getParameter("nama_depan")+"ada kesalahan "+e);          
-    }                             
-            out.println("</body>");
-            out.println("</html>");
+            response.sendRedirect("admin/SiswaBaru.jsp");                                   
+            }catch(Exception e){
+                out.print(request.getParameter("nama_depan")+"ada kesalahan "+e);          
+            }                             
+                out.println("</body>");
+                out.println("</html>");
+            }
         }
-    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

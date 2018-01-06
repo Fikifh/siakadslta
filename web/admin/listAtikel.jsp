@@ -42,7 +42,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style/css/bootstrap.css">         
+        <link rel="stylesheet" type="text/css" href="/Siakadslta/style/css/bootstrap.css">         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -105,13 +105,13 @@
                     String id_berita=rs.getString(1);
                     String judul=rs.getString(2);
                     String tanggal=rs.getString(3);
-                    String id_admin=rs.getString(3);
+                    String id_admin=rs.getString(4);
                     a++;             
                 %>
             <tbody>
               <tr>                
                 <th scope="row"><%out.print(a);%></th>
-                <td ><%=judul%></td>
+                <td ><a href="/Siakadslta/berita.jsp?judul=<%=judul%>"><%=judul%></a></td>
                 <td><%=tanggal%></td>
                 <td><%=id_admin%></td>                               
                 <td><form action="admin-edit-berita.jsp" method="post">

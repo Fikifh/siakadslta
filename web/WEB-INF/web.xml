@@ -54,6 +54,14 @@
         <servlet-name>kalkulasiNilai</servlet-name>
         <servlet-class>Controller.kalkulasiNilai</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>mendaftarSiswa</servlet-name>
+        <servlet-class>Controller.mendaftarSiswa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>kirimpesan</servlet-name>
+        <servlet-class>Controller.kirimpesan</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -81,6 +89,14 @@
     <servlet-mapping>
         <servlet-name>kalkulasiNilai</servlet-name>
         <url-pattern>/kalkulasiNilai</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mendaftarSiswa</servlet-name>
+        <url-pattern>/mendaftarSiswa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>kirimpesan</servlet-name>
+        <url-pattern>/kirimpesan</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

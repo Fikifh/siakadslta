@@ -32,7 +32,7 @@
         
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                     <img src="images/logo-sma_1.png" id="logo">
-                    <a class="navbar-brand" href="#" style="color:#ffffff">Home</a>
+                    <a class="navbar-brand" href="index.jsp" style="color:#ffffff">Home</a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -83,7 +83,7 @@
                   <button class="btn btn-primary" type="submit">Login</button>
                     </form>
                 </div>
-                
+                <div id="sukses" onClick="alert('Sukses Terdaftar!')"></div>
                 <script>
                 // Example starter JavaScript for disabling form submissions if there are invalid fields
                 (function() {

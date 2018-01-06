@@ -101,7 +101,6 @@ public class LoginNGTest {
         Login instance = new Login();
         instance.setUsername(user);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -115,7 +114,17 @@ public class LoginNGTest {
         String result = instance.getUsername();
         assertEquals(result, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getId method, of class Login.
+     */
+    @Test
+    public void testGetId() {
+        System.out.println("getId");
+        Login instance = new Login();
+        instance.getId();
+        // TODO review the generated test code and remove the default call to fail.
     }
     
 }

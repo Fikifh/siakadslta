@@ -1,9 +1,9 @@
 <%-- 
-    Document   : home-guru
-    Created on : Dec 7, 2017, 7:19:17 AM
+    Document   : navbar-siswa
+    Created on : Jan 7, 2018, 2:02:06 PM
     Author     : syah
 --%>
-    <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,81 +35,42 @@
             .link{
                 width: 100%;
             }
-        </style> 
-        <title>Biodata Siswa</title>
-   
-    <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
-    %>
-    <script type="text/javascript">
-        function log(){
-            var x = confirm("Masuk ke Laman Login?");                
-            if (x){
-                window.location.href="FormLogin.jsp";
-            }else{
-                window.close();
-            }    
-        }
-
-    </script>
-    </head>
-    <body onload="log()">
-
-<!--<a href="index.jsp" onload="log()">Silahkan Masuk Terlebih Dahulu</a>-->
-    <% }else{
-    %>
-
-  
+        </style>       
+      
         
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                    <img src="images/logo-sma_1.png" id="logo">
-                    <a class="navbar-brand" href="home-guru.jsp" style="color:#ffffff">Siakadslta</a>
+                    <img src="/Siakadslta/images/logo-sma_1.png" id="logo">
+                    <a class="navbar-brand" href="/Siakadslta/home-siswa.jsp" style="color:#ffffff">Siakadslta</a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                        <a class="nav-link" href="#" style="color:#ffffff">Profil<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/Siakadslta/profil.jsp" style="color:#ffffff">Profil<span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#" style="color:#ffffff">Gallery</a>
+                        <a class="nav-link" href="/Siakadstla/galery.jsp" style="color:#ffffff">Gallery</a>
                       </li>
                       <li class="nav-item dropdown">
-                        <a style="color:#ffffff" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a style="color:#ffffff" class="nav-link dropdown-toggle" href="akademik.jsp" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Akademik
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Kurikulum</a>
-                          <a class="dropdown-item" href="#">Guru</a>
+                          <a class="dropdown-item" href="/Siakadstla/kurikulum.jsp">Kurikulum</a>
+                          <a class="dropdown-item" href="/Siakadstla/guru.jsp">Guru</a>
                           <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Ekstra Kurikuler</a>
+                          <a class="dropdown-item" href="/Siakadstla/ekskul.jsp">Ekstra Kurikuler</a>
                         </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#" style="color:#ffffff">Contact</a>
+                        <a class="nav-link" href="/Siakadslta/contact.jsp" style="color:#ffffff">Contact</a>
                       </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <form method="post" action="hasil-cari-siswa.jsp" class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" name="key" type="search" placeholder="Search" aria-label="Search">
                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>   
-                      <a class="logout" href="logout.jsp">Log Out</a>
+                      <a class="logout" href="/Siakadslta/logout.jsp">Log Out</a>
                   </div>
-                </nav> 
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar side-kiri">
-            <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="guru/jadwal-mengajar.jsp">Jadwal Mengajar</a>
-            </div>
-            <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="guru/Biodata.jsp">Biodata</a>
-            </div>
-            <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="guru/penugasan.jsp">Penugasan</a>                
-            </div> 
-        </div> 
-<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>        
-    </body>
-</html>
-<%
-    }
-%>
+                </nav>         

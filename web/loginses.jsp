@@ -38,8 +38,8 @@
                 try{
                     ResultSet rs = st.executeQuery(sqlSiswa);
                     while(rs.next()){                        
-                        response.sendRedirect("home-siswa.jsp");
                         session.setAttribute("username", nama);                                        
+                        response.sendRedirect("home-siswa.jsp");                        
                     }
                 }catch(Exception ex){
                     out.print("ada error pada "+ex);

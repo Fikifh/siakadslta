@@ -1,9 +1,8 @@
 <%-- 
-    Document   : Biodata
-    Created on : Dec 4, 2017, 7:20:28 AM
+    Document   : biodata
+    Created on : Jan 7, 2018, 9:51:16 AM
     Author     : syah
 --%>
-
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="Controller.insertData"%>
@@ -38,7 +37,7 @@
     <body>
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                     <img src="images/logo-sma_1.png" id="logo">
-                    <a class="navbar-brand" href="home-siswa.jsp" style="color:#ffffff">Home</a>
+                    <a class="navbar-brand" href="/Siakadslta/home-siswa.jsp" style="color:#ffffff">Home</a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -72,9 +71,9 @@
                   </div>
                 </nav> 
                 <%
-                try {   
-                    Login log =new Login();
-                    String Nis = log.getUsername();
+                Login log =new Login();
+                String Nis = log.getUsername();
+                try {                      
                     String url =    "jdbc:postgresql://localhost:5432/sias";
                     String user = "postgres";
                     String password = "root";
@@ -83,63 +82,92 @@
                     ResultSet rs = null;
                     Class.forName("org.postgresql.Driver");
                     Connection konek = DriverManager.getConnection(url, user, password);
-                    statement = konek.createStatement();
-                    String Data = "select nama_depan,nama_tengah,nama_belakang,gender,alamat,detail_siswa,email, no_hp, tanggal_lahir from siswa WHERE nis="+session.getAttribute("username")+"";
+                    statement = konek.createStatement();                                        
+                    String Data = "select nis,nama_depan,nama_tengah,nama_belakang,gender,alamat,detail_siswa,email, no_hp, tanggal_lahir from siswa WHERE nis="+session.getAttribute("username")+"";
                     rs = statement.executeQuery(Data);                    
                 %>
-                <form action="BiodataF.jsp" class="container" id="needs-validation" novalidate>
+                <form action="updateSiswa.jsp" class="container" id="needs-validation" novalidate>
                     <h3>Biodata Siswa</h3>
                     <%while(rs.next()){%>
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationCustom01">Nama Depan</label>
-                      <input type="text" name="nama_depan" class="form-control" id="validationCustom01" placeholder="<%=rs.getString(1)%>" disabled>
-                    </div>
+                      <label for="validationCustom01">NIS</label>
+                      <input disabled="true" name="nis_siswa" type="text" class="form-control" id="validationCustom01" value="<%=rs.getString(1)%>" placeholder="<%=rs.getString(1)%>">
+                    </div>                    
                     <div class="col-md-6 mb-3">
-                      <label for="validationCustom02">Nama Tengah</label>
-                      <input type="text" name="nama_tengah" class="form-control" id="validationCustom02" placeholder="<%=rs.getString(2)%>" disabled>
+                      <label for="validationCustom02">Nama Depan</label>
+                      <input type="text" name="nama_depan" class="form-control" id="validationCustom02" value="<%=rs.getString(2)%>" >
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationCustom03">Nama Belakang</label>
-                      <input type="text" name="nama_belakang" class="form-control" id="validationCustom03" placeholder="<%=rs.getString(3)%>" disabled>                     
+                      <label for="validationCustom01">Nama Tengah</label>
+                      <input type="text" name="nama_tengah" class="form-control" id="validationCustom01" value="<%=rs.getString(3)%>" >
                     </div>
-                        <div class="col-md-6 mb-3">
-                          <label for="validationCustom04">Jenis Kelamin</label>
-                          <input type="text" name="nama_belakang" class="form-control" id="validationCustom03" placeholder="<%=rs.getString(4)%>" disabled>                     
-                        </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="validationCustom03">Nama Belakang</label>
+                      <input type="text" name="nama_belakang" class="form-control" id="validationCustom03" value="<%=rs.getString(4)%>" >                     
+                    </div>                        
                     </div>  
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationCustom07">Alamat</label>
-                      <input type="text" name="alamat" class="form-control" id="validationCustom04" placeholder="<%=rs.getString(5)%>" disabled>                 
+                        <label for="validationCustom07">Jenis Kelamin</label><br>
+                      <%String jkel = rs.getString(5);%>
+                      <%
+                      if(jkel.equals("Laki-Laki")){%>
+                        <input type="radio" aria-label="Radio button" name="jk" value="Laki-Laki" checked="true"> 
+                        <label for="validationCustom05" style="margin-left: 20px;">Laki-Laki</label>                              
+                        <input type="radio" aria-label="Radio button" name="jk" value="Perempuan" style="margin-left: 20px;">
+                        <label for="validationCustom06" style="margin-left: 20px;">Perempuan</label>
+                      <%
+                      }else
+                      if(jkel.equals("Perempuan")){
+                      %>
+                        <input type="radio" aria-label="Radio button" name="jk" value="Laki-Laki"> 
+                        <label for="validationCustom05" style="margin-left: 20px;">Laki-Laki</label>                              
+                        <input type="radio" aria-label="Radio button" name="jk" value="Perempuan" style="margin-left: 20px;" checked="true">
+                        <label for="validationCustom06" style="margin-left: 20px;">Perempuan</label>
+                          <%
+                      }else{
+                                out.println("ada kesalahan koneksi");
+                                out.print(jkel);
+                            }
+                      %>                                            
                     </div>
                     <div class="col-md-6 mb-3">
-                      <label for="validationCustom08">Detail Siswa</label>
-                      <input type="text" name="detail" class="form-control" id="validationCustom05" placeholder="<%=rs.getString(6)%>"  disabled>                      
+                      <label for="validationCustom08">Alamat Siswa</label>
+                      <input type="text" name="alamat" class="form-control" id="validationCustom05" value="<%=rs.getString(6)%>"  >                      
                     </div>
                   </div>
                     <div class="row">
+                      <!--<div class="col-md-6 mb-3">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=rs.getString(5)%>" >
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div> -->
+                      <div class="col-md-6 mb-3">
+                      <label for="validationCustom08">Detail Siswa</label>
+                      <input type="text" name="detail" class="form-control" id="validationCustom05" value="<%=rs.getString(7)%>"  >                      
+                      </div>
                       <div class="col-md-6 mb-3">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<%=rs.getString(7)%>" disabled>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=rs.getString(8)%>" >
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                      </div>  
-                      <div class="col-md-6 mb-3">
-                        <label for="exampleinputhandphonenumber">Nomor Hand phone</label>
-                        <input type="handphonenumber" name="no_hp" class="form-control" id="exampleinputhandphonenumber" aria-describedby="phonenumberHelp" placeholder="<%=rs.getString(8)%>" disabled>
-                        <small id="phonenumberHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
-                      </div>                         
+                      </div>                                              
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
+                            <label for="exampleinputhandphonenumber">Nomor Hand phone</label>
+                            <input type="handphonenumber" name="no_hp" class="form-control" id="exampleinputhandphonenumber" aria-describedby="phonenumberHelp" value="<%=rs.getString(9)%>" >
+                            <small id="phonenumberHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+                        </div>                         
+                        <div class="col-md-6 mb-3">
                             <label for="validationCustom09">Tanggal Lahir</label>
-                            <input type="text" name="tanggal_lahir" class="form-control" id="validationCustom04" placeholder="<%=rs.getString(9)%>" disabled>                 
-                        </div>
+                            <input type="text" name="tanggal_lahir" class="form-control" id="validationCustom04" value="<%=rs.getString(10)%>">                 
+                        </div>                        
                     </div>
-                  <button class="btn btn-primary" type="submit">Edit</button>
-                </form
+                  <button class="btn btn-primary" type="submit">Simpan</button>
+                </form>
                 <%
                     }
       
@@ -164,6 +192,6 @@
                     }, false);
                   }, false);
                 })();
-                </script>                             
+                </script>                  
     </body>
 </html>

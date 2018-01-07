@@ -3,26 +3,7 @@
     Created on : Dec 7, 2017, 7:19:17 AM
     Author     : syah
 --%>
-    <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
-    %>
-    <script type="text/javascript">
-        function log(){
-            var x = confirm("Masuk ke Laman Login?");                
-            if (x){
-                window.location.href="FormLogin.jsp";
-            }else{
-                window.close();
-            }    
-        }
-
-    </script>
-
-    <body onload="log()">
-
-<!--<a href="index.jsp" onload="log()">Silahkan Masuk Terlebih Dahulu</a>-->
-    <% }else{
-    %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+    <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,12 +37,32 @@
             }
         </style> 
         <title>Biodata Siswa</title>
+   
+    <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
+    %>
+    <script type="text/javascript">
+        function log(){
+            var x = confirm("Masuk ke Laman Login?");                
+            if (x){
+                window.location.href="FormLogin.jsp";
+            }else{
+                window.close();
+            }    
+        }
+
+    </script>
     </head>
-    <body>
+    <body onload="log()">
+
+<!--<a href="index.jsp" onload="log()">Silahkan Masuk Terlebih Dahulu</a>-->
+    <% }else{
+    %>
+
+  
         
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                     <img src="images/logo-sma_1.png" id="logo">
-                    <a class="navbar-brand" href="#" style="color:#ffffff">SMAN 1</a>
+                    <a class="navbar-brand" href="home-guru.jsp" style="color:#ffffff">Siakadslta</a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -97,11 +98,14 @@
                 </nav> 
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar side-kiri">
             <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="#">Jadwal Mata Pelajaran</a>
+                <a class="btn btn-primary link" href="guru/jadwal-mengajar.jsp">Jadwal Mengajar</a>
             </div>
             <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="Biodata.jsp">Biodata</a>
-            </div>            
+                <a class="btn btn-primary link" href="guru/Biodata.jsp">Biodata</a>
+            </div>
+            <div class="bd-toc-item bungkus-link-side-kiri">
+                <a class="btn btn-primary link" href="guru/penugasan.jsp">Penugasan</a>                
+            </div> 
         </div> 
 <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>        
     </body>

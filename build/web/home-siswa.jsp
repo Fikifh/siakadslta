@@ -3,7 +3,9 @@
     Created on : Dec 1, 2017, 10:03:25 PM
     Author     : syah
 --%>      
-        <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
+        <%@page import="Controller.TheConnection"%>
+<%@page import="java.sql.ResultSet"%>
+<%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
         %>
         <script type="text/javascript">
             function log(){
@@ -44,9 +46,11 @@
                 margin-left: 28px;
             }
             .side-kiri{
-                margin: 15px 10px 10px 0px;
-                border : 1px solid #138496;
-
+                margin: 2px 10px 0px 0px;
+                border-right: 1px solid #138496;
+                height: 533px;
+                width: 200px;
+                padding-top: 15px; 
             }
             .bungkus-link-side-kiri{
                 padding-bottom: 10px;
@@ -61,7 +65,7 @@
         
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                     <img src="images/logo-sma_1.png" id="logo">
-                    <a class="navbar-brand" href="#" style="color:#ffffff">SMAN 1</a>
+                    <a class="navbar-brand" href="home-siswa.jsp" style="color:#ffffff">Siakadslta</a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -86,7 +90,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#" style="color:#ffffff">Contact</a>
-                      </li>
+                      </li>                      
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -97,13 +101,57 @@
                 </nav> 
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar side-kiri">
             <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="#">Jadwal Mata Pelajaran</a>
+                <%
+                    
+                    try{
+                    String sql = "SELECT k.id_kelas,k.nama_kelas from kelas k join siswa s on k.id_kelas=s.id_kelas  WHERE nis="+session.getAttribute("username")+"";
+                    TheConnection konek = new TheConnection();
+                    ResultSet rs =konek.executeQuery(sql);
+                    while (rs.next()){                
+                      String id_kelas = rs.getString(1); 
+                      String nama_kelas = rs.getString(2);                       
+                      
+                    %>
+                    <form action="siswa/jadwalmatpel.jsp">
+                        <input type="text" hidden="true" name="id_kelas" value="<%=id_kelas%>">
+                        <button class="btn btn-primary link">Jadwal Mata Pelajaran</button>
+                    </form>
+                    <%
+                    }
+                    }catch(Exception e){
+                        out.print("ada kesalahan!");
+                    }
+                    %>
             </div>
             <div class="bd-toc-item bungkus-link-side-kiri">
-                <a class="btn btn-primary link" href="Biodata.jsp">Biodata</a>
-            </div>            
+                <a class="btn btn-primary link" href="siswa/biodata.jsp">Biodata</a>
+            </div>
+            <div class="dropdown">                    
+                    <button class="btn btn-primary dropdown-toggle link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Tugas
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%
+                    int a=0;
+                    try{
+                    String sql = "SELECT t.judul_tugas,t.deskripsi,k.nama_kelas from tugas t join kelas k on t.id_kelas=k.id_kelas join siswa s on k.id_kelas=s.id_kelas WHERE nis="+session.getAttribute("username")+"";
+                    TheConnection konek = new TheConnection();
+                    ResultSet rs =konek.executeQuery(sql);
+                    while (rs.next()){                
+                      String judul = rs.getString(1); 
+                      String des = rs.getString(2);
+                      String nkelas = rs.getString(3);
+                      a++;
+                    %>
+                    <a class="dropdown-item" href="siswa/tugas.jsp"><b><%=a%>. </b><%=judul%></a>
+                    <%}
+                    }catch(Exception e){
+                        out.print("ada kesalahan!");
+                    }   
+                    %>             
+                    </div>
+                </div>
         </div> 
-<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>        
     </body>
 </html>
 <%

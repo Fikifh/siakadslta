@@ -127,27 +127,29 @@
                 </div>
                 <script>$('.carousel').carousel();</script>
             </div>                   
-        <div class="col-sm-12">
-            <h3 title="berita terbaru">Berita Terbaru</h3>                    
-            <ul>
-                <%
-                try{
-                    TheConnection konek = new TheConnection();
-                    String sql = "SELECT judul_berita FROM berita ORDER BY tanggal_dibuat ASC";                        
-                    ResultSet rs;
-                    rs=konek.executeQuery(sql);
-                    while(rs.next()){                                            
-                %>
+            <div class="container-fluid">
+                <div class="col-sm-11">
+                <h3 title="berita terbaru">Berita Terbaru</h3>                    
+                <ul>
+                    <%
+                    try{
+                        TheConnection konek = new TheConnection();
+                        String sql = "SELECT judul_berita FROM berita ORDER BY tanggal_dibuat ASC";                        
+                        ResultSet rs;
+                        rs=konek.executeQuery(sql);
+                        while(rs.next()){                                            
+                    %>
 
-                    <li>                           
-                        <a class="untukBody" href="berita.jsp?judul=<%=rs.getString(1)%>" name="judul"><%=rs.getString(1)%></a>
-                    </li>
-                <%}
-                }catch(Exception e){
-                    out.println("ada kesalahan !");
-                }
-                %>
-            </ul>
+                        <li>                           
+                            <a class="untukBody" href="berita.jsp?judul=<%=rs.getString(1)%>" name="judul"><%=rs.getString(1)%></a>
+                        </li>
+                    <%}
+                    }catch(Exception e){
+                        out.println("ada kesalahan !");
+                    }
+                    %>
+                </ul>
+            </div>
         </div>
           
         <%@include file="footer.jsp"%>

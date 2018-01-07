@@ -1,0 +1,1 @@
+<%System.out.prinln("ini adalah aplikasi untuk sistem informasi akademik slta");%>

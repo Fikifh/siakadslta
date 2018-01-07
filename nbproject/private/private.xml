@@ -3,18 +3,59 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/cobaPrint.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/lihatJadwal.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambah-jadwal.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/home-admin.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/navbar.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/index.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambah-pelajaran.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/lihatJadwalPelajaran.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambahkan-jadwal-kbm.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/tambahMatpel.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/kirimpesan.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/jadwalmatpel.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/hapusKelas.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambah-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/tambahTugas.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/navbar-siswa.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/editKelas.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/Biodata.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/tambahKelas.java</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/printoutjadwal.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/buatJadwal.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambah-jadwal.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/home-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/biodata.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/semua-kelas.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/FormLogin.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/style/style.css</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/updateguru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/listAtikel.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/navbar.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/jadwal-matpel-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/edit-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/penugasan.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/siswa-kelas-x.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/buat_berita.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/updateGuru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/footer.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/index.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambahkan-jadwal-kbm.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/admin-edit-kelas.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/lihatJadwal.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/admin-edit-siswa.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/printoutjadwal-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/lihatJadwalPelajaran.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/jadwal-mengajar.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/tambahKbm.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/loginses.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/style/style-index.css</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/AdminEditSiswa.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/home-admin.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/semua-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambah-pelajaran.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/admin-edit-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/tambahMatpel.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/updateSiswa.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/updateSiswa.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/navbar-guru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/Biodata.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/navbar.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/build.xml</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/home-siswa.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambah-kelas.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/tugas.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>

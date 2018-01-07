@@ -13,6 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style/css/bootstrap.css">         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -23,6 +24,17 @@
         <style type="text/css">
             a{                
                 color: white !important;                
+            }
+            .clear{
+                clear: both;
+            }
+            .as{height: 140px;
+                width: 140px;
+                margin: 10px;
+                float: left;
+                border: 1px solid #004085;
+                border-radius: 4px;
+                background-color: #1c7430;
             }
             .untukBody{
                 color: #000 !important;
@@ -104,7 +116,7 @@
           </div>
         </nav>                       
               <div class="col-sm-12"style="padding: 0px;">
-                <div id="carouselExampleControls" style="margin: 0px; border: 1px solid #000;" class="carousel slide cours" data-ride="carousel">
+                <div id="carouselExampleControls" style="margin: 0px;" class="carousel slide cours" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                           <img class="d-block w-100 cours" src="images/slide1_1.jpg" alt="First slide" height="400px" width="60%">
@@ -127,10 +139,9 @@
                 </div>
                 <script>$('.carousel').carousel();</script>
             </div>                   
-            <div class="container-fluid">
-                <div class="col-sm-11">
-                <h3 title="berita terbaru">Berita Terbaru</h3>                    
-                <ul>
+            <div class="container">
+                <div class="form-group container col-sm-11" >
+                <h3 title="berita terbaru">Berita Terbaru</h3>                                    
                     <%
                     try{
                         TheConnection konek = new TheConnection();
@@ -138,20 +149,20 @@
                         ResultSet rs;
                         rs=konek.executeQuery(sql);
                         while(rs.next()){                                            
-                    %>
-
-                        <li>                           
-                            <a class="untukBody" href="berita.jsp?judul=<%=rs.getString(1)%>" name="judul"><%=rs.getString(1)%></a>
-                        </li>
+                    %>                      
+                    <a style="text-align: center;" class="untukBody" href="berita.jsp?judul=<%=rs.getString(1)%>" name="judul">
+                    <figure class="figure as col-sm-2">                                                
+                        <%=rs.getString(1)%>                                	                                        			                                                                    
+                    </figure>
+                    </a>
                     <%}
                     }catch(Exception e){
                         out.println("ada kesalahan !");
                     }
-                    %>
-                </ul>
-            </div>
-        </div>
-          
+                    %> 
+                    <div class="clear"></div>
+                </div>
+        </div>          
         <%@include file="footer.jsp"%>
     </body>
 </html>

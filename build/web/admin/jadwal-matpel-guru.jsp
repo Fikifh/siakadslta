@@ -15,19 +15,18 @@
        
     <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
     %>
-    <script type="text/javascript">
-        function log(){
-            var x = confirm("Masuk ke Laman Login?");                
-            if (x){
-                window.location.href="FormLogin.jsp";
-            }else{
-                window.close();
-            }    
-        }
-
-    </script>
+        <script type="text/javascript">
+            function log(){
+                var x = confirm("Masuk ke Laman Login?");                
+                if (x){
+                    window.location.href="FormLogin.jsp";
+                }else{
+                    window.close();
+                }    
+            }
+        </script>
     </head> 
-    <body onload="log()">
+    <body onLoad="log();">
 
 <!--<a href="index.jsp" onload="log()">Silahkan Masuk Terlebih Dahulu</a>-->
     <% }else{

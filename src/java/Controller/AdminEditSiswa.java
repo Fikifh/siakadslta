@@ -34,8 +34,13 @@ public class AdminEditSiswa extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-    
+    String nis;
+    public void setNis(String nii){
+        this.nis=nii;
+    }
+    public String getNis(){
+        return this.nis;
+    }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -43,7 +48,8 @@ public class AdminEditSiswa extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
           try{ 
             String klik = request.getParameter("nis");
-            
+            AdminEditSiswa ads = new AdminEditSiswa();
+            ads.setNis(klik);
             String url =    "jdbc:postgresql://localhost:5432/sias";
             String user = "postgres";
             String password = "root";

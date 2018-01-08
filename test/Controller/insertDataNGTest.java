@@ -17,26 +17,6 @@ import org.testng.annotations.Test;
  * @author syah
  */
 public class insertDataNGTest {
-    
-    public insertDataNGTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @BeforeMethod
-    public void setUpMethod() throws Exception {
-    }
-
-    @AfterMethod
-    public void tearDownMethod() throws Exception {
-    }
-
     /**
      * Test of insert method, of class insertData.
      */

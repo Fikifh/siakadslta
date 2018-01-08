@@ -22,82 +22,13 @@ public class LoginNGTest {
     
     public LoginNGTest() {
     }
-
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @BeforeMethod
-    public void setUpMethod() throws Exception {
-    }
-
-    @AfterMethod
-    public void tearDownMethod() throws Exception {
-    }
-
-    /**
-     * Test of processRequest method, of class Login.
-     */
-    @Test
-    public void testProcessRequest() throws Exception {
-        System.out.println("processRequest");
-        HttpServletRequest request = null;
-        HttpServletResponse response = null;
-        Login instance = new Login();
-        instance.processRequest(request, response);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of doGet method, of class Login.
-     */
-    @Test
-    public void testDoGet() throws Exception {
-        System.out.println("doGet");
-        HttpServletRequest request = null;
-        HttpServletResponse response = null;
-        Login instance = new Login();
-        instance.doGet(request, response);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of doPost method, of class Login.
-     */
-    @Test
-    public void testDoPost() throws Exception {
-        System.out.println("doPost");
-        HttpServletRequest request = null;
-        HttpServletResponse response = null;
-        Login instance = new Login();
-        instance.doPost(request, response);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getServletInfo method, of class Login.
-     */
-    @Test
-    public void testGetServletInfo() {
-        System.out.println("getServletInfo");
-        Login instance = new Login();
-        String expResult = "";
-        String result = instance.getServletInfo();
-        assertEquals(result, expResult);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
     /**
      * Test of setUsername method, of class Login.
      */
     @Test
     public void testSetUsername() {
         System.out.println("setUsername");
-        String user = "";
+        String user = null;
         Login instance = new Login();
         instance.setUsername(user);
         // TODO review the generated test code and remove the default call to fail.
@@ -110,12 +41,22 @@ public class LoginNGTest {
     public void testGetUsername() {
         System.out.println("getUsername");
         Login instance = new Login();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getUsername();
         assertEquals(result, expResult);
         // TODO review the generated test code and remove the default call to fail.
     }
-
+     /**
+     * Test of SetId method, of class Login.
+     */
+    @Test
+    public void testSetId() {
+        System.out.println("SetId");
+        String nis = null;
+        Login instance = new Login();
+        instance.SetId(nis);
+      
+    }
     /**
      * Test of getId method, of class Login.
      */
@@ -123,8 +64,9 @@ public class LoginNGTest {
     public void testGetId() {
         System.out.println("getId");
         Login instance = new Login();
-        instance.getId();
+        String expResul = null;
+        String result = instance.getId();
+        assertEquals(result, expResul);
         // TODO review the generated test code and remove the default call to fail.
-    }
-    
+    } 
 }

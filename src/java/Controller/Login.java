@@ -23,6 +23,20 @@ import java.io.*;
  */
 public class Login extends HttpServlet {
 
+      String name;
+    String Nis;
+    public void SetId(String nis){
+        this.Nis=nis;
+    }
+     public String getId(){
+       return this.Nis;
+    }
+    public void setUsername(String user){                
+        this.name=user;
+        }
+    public String getUsername(){
+        return this.name; 
+    }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,14 +46,8 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    String name;
-    String Nis;
-    public void setUsername(String user){                
-        this.name=user;
-        }
-    public String getUsername(){
-        return this.name;
-    }
+   
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -82,9 +90,7 @@ public class Login extends HttpServlet {
         }
         
     }
-    public void getId(){
-        String id=Nis;
-    }
+  
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

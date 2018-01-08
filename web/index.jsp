@@ -12,8 +12,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style/css/bootstrap.css">         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -22,8 +21,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style type="text/css">
-            a{                
-                color: white !important;                
+            
+            a .c{
+                color: black !important;
+            }
+            .btr{
+                color: white;
             }
             .clear{
                 clear: both;
@@ -31,13 +34,18 @@
             .as{height: 140px;
                 width: 140px;
                 margin: 10px;
-                float: left;
-                border: 1px solid #004085;
+                float: left;                
                 border-radius: 4px;
                 background-color: #1c7430;
             }
+            .as:hover{height: 140px;                
+                background-color: #66afe9;
+            }
             .untukBody{
                 color: #000 !important;
+            }
+            .untukBody:hover{
+                color: #66afe9 !important;
             }
             #logo{
                 height: 40px;
@@ -58,6 +66,34 @@
                 height: 90%;
                 width: 100%;
             }
+            #footer{
+	width: 100%;
+	height: 300px;
+	background-color: #222;
+	margin: 0px;
+	border: none;
+	border: 1px solid black;
+}
+#footer #bungkus-sosial{
+	margin: 30px auto;
+	width: 600px;
+	padding-left: 90px;
+	height: 100px;
+	text-align: center;
+}
+#footer #bungkus-sosial .sosial{
+	float: left;
+	margin: 30px 50px;
+	color:red;
+}
+#footer #bungkus-sosial .sosial a{
+	color:black;
+}
+#footer #copy{
+	margin: 50px auto;
+	text-align: center;
+	color: white;
+}
         </style> 
         <title>Siakadslta</title>
     </head>             
@@ -71,24 +107,24 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#" style="color:#ffffff">Profil<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="profil.jsp" style="color:#ffffff">Profil<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a id="galeri" class="nav-link" href="#" style="color:#ffffff">Gallery</a>
+                <a id="galeri" class="nav-link" href="gallery.jsp" style="color:#ffffff">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a style="color:#ffffff" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Akademik
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Kurikulum</a>
-                  <a class="dropdown-item" href="#">Guru</a>
+                    <a style="color:black;" class="dropdown-item c" href="kurikulum.jsp">Kurikulum</a>
+                  <a style="color:black;" class="dropdown-item c" href="guru.jsp">Guru</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Ekstra Kurikuler</a>
+                  <a style="color:black;" class="dropdown-item c" href="eskul.jsp">Ekstra Kurikuler</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="color:#ffffff">Contact</a>
+                <a class="nav-link" href="contact.jsp" style="color:#ffffff">Contact</a>
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -100,8 +136,8 @@
                 %>        
                 <%if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
                 %>
-                <form action="FormLogin.jsp" style=" margin-top: 15px;">
-                    <button style="margin-left:15px;" type="submit" class="btn btn-info" aria-label="Left Align">
+                <form action="FormLogin.jsp" style=" margin-top: 0px; padding-top: 15px; ">
+                    <button style="margin:0px 15px; border: 1px solid white;" type="submit" class="btn btn-info" aria-label="Left Align">
                        <span class="glyphicon glyphicon-align-left" aria-hidden="true">login</span>                         
                     </button>
                 </form>
@@ -152,7 +188,7 @@
                     %>                      
                     <a style="text-align: center;" class="untukBody" href="berita.jsp?judul=<%=rs.getString(1)%>" name="judul">
                     <figure class="figure as col-sm-2">                                                
-                        <%=rs.getString(1)%>                                	                                        			                                                                    
+                        <p class="btr"><%=rs.getString(1)%></p>                                	                                        			                                                                    
                     </figure>
                     </a>
                     <%}

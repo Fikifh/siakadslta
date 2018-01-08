@@ -80,7 +80,7 @@
                       <a class="dropdown-item" href="/Siakadslta/admin/SiswaKelasXI.jsp">Kelas XI</a>
                       <a class="dropdown-item" href="/Siakadslta/admin/SiswaKelasXII.jsp">Kelas XII</a>
                       <a class="dropdown-item" href="/Siakadslta/admin/kelola-siswa.jsp">Semua Kelas</a>
-                      <a class="dropdown-item" href="/Siakadslta/admin/SiswaBaru.jsp">Calon Siswa Baru</a>
+                      <a class="dropdown-item" href="/Siakadslta/admin/SiswaBaru.jsp">Calon Siswa Baru</a>                      
                     </div>
                 </div>                                
             </div>            

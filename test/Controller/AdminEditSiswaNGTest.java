@@ -5,8 +5,8 @@
  */
 package Controller;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -18,9 +18,9 @@ import org.testng.annotations.Test;
  *
  * @author syah
  */
-public class TheConnectionNGTest {
+public class AdminEditSiswaNGTest {
     
-    public TheConnectionNGTest() {
+    public AdminEditSiswaNGTest() {
     }
 
     @BeforeClass
@@ -38,30 +38,31 @@ public class TheConnectionNGTest {
     @AfterMethod
     public void tearDownMethod() throws Exception {
     }
+
     /**
-     * Test of execute method, of class TheConnection.
+     * Test of setNis method, of class AdminEditSiswa.
      */
     @Test
-    public void testExecute() {
-        System.out.println("execute");
-        String SQL = "";
-        int expResult = 0;
-        int result = TheConnection.execute(SQL);
-        assertEquals(result, expResult);
+    public void testSetNis() {
+        System.out.println("setNis");
+        String nii = "";
+        AdminEditSiswa instance = new AdminEditSiswa();
+        instance.setNis(nii);
         // TODO review the generated test code and remove the default call to fail.
+        
     }
 
     /**
-     * Test of executeQuery method, of class TheConnection.
+     * Test of getNis method, of class AdminEditSiswa.
      */
     @Test
-    public void testExecuteQuery() {
-        System.out.println("executeQuery");
-        String SQL = "";
-        ResultSet expResult = null;
-        ResultSet result = TheConnection.executeQuery(SQL);
+    public void testGetNis() {
+        System.out.println("getNis");
+        AdminEditSiswa instance = new AdminEditSiswa();
+        String expResult = null;
+        String result = instance.getNis();
         assertEquals(result, expResult);
         // TODO review the generated test code and remove the default call to fail.
+        
     }
-    
 }

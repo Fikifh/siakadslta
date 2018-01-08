@@ -7,16 +7,16 @@
         <div id="footer">
 			<div id="bungkus-sosial">
 				<div class="sosial">
-					<img src="facebook.png"><br>
-					<a href="#">Facebook</a href="#">
+                                    <img src="images/facebook.jpg" width="20px" heigh="20px"><br>
+					<a href="facebook.com">Facebook</a href="#">
 				</div>
 				<div class="sosial">
-					<img src="twitter.png"><br>
-					<a href="#">Twitter</a href="#">
+					<img src="images/twitter.png" width="20px" heigh="20px"><br>
+					<a href="twitter.com">Twitter</a href="#">
 				</div>
 				<div class="sosial">
-					<img src="instagram.png"><br>
-					<a href="#">Instagram</a>
+					<img src="images/instagram.jpg" width="20px" heigh="20px"><br>
+                                        <a href="instagram.com">Instagram</a>
 				</div>
 			</div>
 			<div id="copy">

@@ -58,7 +58,8 @@ public class TheConnectionNGTest {
     public void testExecuteQuery() {
         System.out.println("executeQuery");
         String SQL = "";
-        ResultSet expResult = null;
+        ResultSet expResult=null;
+       
         ResultSet result = TheConnection.executeQuery(SQL);
         assertEquals(result, expResult);
         // TODO review the generated test code and remove the default call to fail.

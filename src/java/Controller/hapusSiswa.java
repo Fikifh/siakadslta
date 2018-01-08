@@ -55,7 +55,7 @@ public class hapusSiswa extends HttpServlet {
             String sql = "UPDATE siswa_baru SET status='Ditolak' WHERE id_sisbar="+nis+"";
             Statement st = konek.createStatement();           
             int status = st.executeUpdate(sql);           
-            response.sendRedirect("admin/SiswaBaru.jsp");                                   
+            response.sendRedirect("admin/siswa-kelas-x.jsp");                                   
             }catch(Exception e){
                 out.print(request.getParameter("nama_depan")+"ada kesalahan "+e);          
             }                             

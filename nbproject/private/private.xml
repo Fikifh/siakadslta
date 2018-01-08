@@ -4,25 +4,38 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/kirimpesan.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/style/style.css</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/printoutjadwal-siswa.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/Login.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/jadwalmatpel.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/printoutjadwal-guru.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/contact.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/ekskul.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/insertDataNGTest.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/jadwal-mengajar.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/TheConnection.java</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/kurikulum.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/uploadArtikel.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/gallery.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/home-admin.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/hapusSiswa.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/siswa/biodata.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/AdminEditSiswa.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/home-admin.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/AdminEditSiswaNGTest.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/footer.jsp</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/profil.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/SiswaBaru.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/CBiodataF.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/LoginNGTest.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/style/style.css</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/Login.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/insertDataNGTest.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/siswa-kelas-x.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/src/java/Controller/uploadArtikel.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/guru/Biodata.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/gallery.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/footer.jsp</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/build.xml</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/TheConnectionNGTest.java</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/index.jsp</file>
-            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/LoginNGTest.java</file>
             <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/test/Controller/uploadArtikelNGTest.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/WEB-INF/web.xml</file>
+            <file>file:/D:/KULIAH/SEMESTER%205/PENGEMBANGAN%20APLIKASI%20WEB/Proposal/Siakadslta/web/admin/tambahkan-jadwal-kbm.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -15,6 +15,7 @@
         <%@include file="navbar-siswa.jsp" %>
     </head>
     <body>
+        <div class="container-fluid" col-sm-6>
         <table class="table">
             <thead>
               <tr>
@@ -60,5 +61,10 @@
            }
            %>
        </table>       
+       <form action="printoutjadwal-siswa.jsp">
+           <input name="id_kelas" type="text" value="<%=id_kelas%>" hidden="true">
+       <button class="btn btn-primary">Print</button>
+       </form>
+    </div>       
     </body>
 </html>

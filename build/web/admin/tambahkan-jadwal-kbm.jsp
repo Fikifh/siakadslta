@@ -50,11 +50,11 @@
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Tanggal/Jam Mulai</label>
-        <input type="text" name="jamMulai" class="form-control" id="exampleInputPassword1" placeholder="Tahun-Hari-Bulan Jam:menit:detik">
+        <input type="text" name="jamMulai" class="form-control" id="exampleInputPassword1" placeholder="Jam:menit:detik">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Tanggal/Jam Berakhir</label>
-        <input type="text" name="jamSelesai" class="form-control" id="exampleInputPassword1" placeholder="Tahun-Hari-Bulan Jam:menit:detik">
+        <input type="text" name="jamSelesai" class="form-control" id="exampleInputPassword1" placeholder="Jam:menit:detik">
       </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Hari</label>
